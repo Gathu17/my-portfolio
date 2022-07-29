@@ -1,0 +1,123 @@
+.contact-page{
+    width: 40vw;
+    height: 100vh;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    section{
+    position: absolute;
+    //float: left;
+    width:60%;
+    top: 10%;
+    transform: translateX(-10%);
+     .header{
+         margin: auto;
+         text-align: center;
+         font-size: 3.2em
+     }
+     p{
+        position: relative;
+        left: 10%;
+     }
+     form{
+        position: relative;
+        top: 15% ;
+        width: 80%;
+        height: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        border: none;
+        box-shadow: -2px 2px 15px 5px #062770;
+        perspective: 600px;
+        input{
+            background-color: transparent;
+            width: 60%;
+            margin: 5% 0;
+            padding: 2% 10px;
+            border-radius: 10px;
+            &:focus{
+                color:white;
+                outline: 2px solid lightblue;
+            }
+            &:valid{
+                outline: 2px solid rgb(6, 235, 6);
+                background-color: transparent;
+            }
+            
+        }
+       
+        textarea{
+            background-color: transparent;
+            width: 60%;
+            padding: 2% 10px;
+            border-radius: 10px;
+            height: clamp(30%,50%,300px);
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            color:white;
+            &:has(:focus){
+                color:blue;
+            }
+        }
+        button{
+            padding: 2%;
+            width: 20%;
+            background: transparent;
+            border: none;
+            position: relative;
+            margin-bottom: 10px;
+            cursor: pointer;
+            .btn-text{
+                color: white;
+                mix-blend-mode: difference;
+                animation: bounceIn 0.5s ease-in;
+            }
+            
+            &::before{
+                width:25%;
+                height: 100%;
+                position: absolute;
+                content: '';
+                top:0;
+                left:0;
+                background-color: hsl(200,100%,50%);
+                border-radius: 50px;
+                transition: all 0.5s ease;
+                
+            }
+             &:hover{
+                 &::before{
+                width: 100%;
+                background-color: hsl(200,100%,50%);
+               }
+             }
+              
+            
+        }
+       }
+   }
+   
+}
+.btn-down{
+    transform: translate(-5px,5px);
+     box-shadow: none;
+     transition: all 1s ease-in-out;
+}
+
+@keyframes btnDown {
+    50%{
+        transform: translate(-5px,5px);
+        box-shadow: none;
+    }
+}
+@media only screen and (max-width: 680px) {
+    .contact-page{
+        section{
+            width: 80%;
+        }
+    }
+ }

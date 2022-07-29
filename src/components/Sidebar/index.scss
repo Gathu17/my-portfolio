@@ -1,0 +1,121 @@
+aside {
+    width: 10%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background-color: #00002a;
+    z-index: 1000;
+    img{
+        width: 3em;
+        height: 3em;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        transform: scale(2);
+        top: 20px;
+        left: 0;
+        right: 0;
+
+    }
+    nav{
+        display: flex;
+        
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+        flex-direction: column;
+        a{
+            margin-bottom: 40px;
+            transform: scale(2);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            
+            &:hover{
+                svg{
+                    opacity: 0;
+                }
+                
+                &:after{
+                    opacity: 0.6;
+                }
+            }
+            &:after{
+                content: " ";
+                text-align: center;
+                color: lime;
+                transition: all 0.3s ease-in;
+                position: absolute;
+                font-size: 9px;
+                opacity: 0;
+                
+                z-index: -1;
+                top:0;
+                margin: 0 auto;
+            }
+            &:first-child{
+                &:after{
+                content: "HOME";
+                }
+            }
+            &:nth-child(2){
+                &:after{
+                content: "ABOUT";
+                }
+            }
+            &:nth-child(3){
+                &:after{
+                content: "CONTACT";
+                }
+            }
+            &:nth-child(4){
+                &:after{
+                content: "PROJECTS";
+                }
+            }
+            
+        }
+        a.active{
+            svg{
+                color: lime;
+            }
+            
+        }
+    }
+    .socials{
+        display: flex;
+        
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+        transform: translateX(-20%);
+        flex-direction: column;
+        list-style: none;
+        li{
+            float: left;
+            position: relative;
+            margin: 10px ;
+            transform: scale(1.5)
+        }
+    }
+}
+@media only screen and (max-width: 540px) {
+      aside{
+        width: 15%;
+        nav{
+            a{
+                &:after{
+                    font-size: 5px;
+                }
+            }
+            .socials{
+                transform: translateY(-50%);
+            }
+        }
+      }
+  }
