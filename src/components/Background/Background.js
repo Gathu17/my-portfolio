@@ -1,5 +1,5 @@
 import './index.scss'
-import React,{ useLayoutEffect} from 'react';
+import { useLayoutEffect} from 'react';
 import {gsap} from 'gsap';
 
 
@@ -9,7 +9,7 @@ const Background = () => {
         
       var container = document.getElementById("bg-container")
     var width = container.clientWidth;
-      var height = container.clientHeight;
+      
         for(let i=0;i< 5;i++){
          
             for(var j=0; j<5; j++){
@@ -34,7 +34,7 @@ const Background = () => {
         }
        
       }
-     const onMove =  
+     
       useLayoutEffect(() => {
         
             addBox()

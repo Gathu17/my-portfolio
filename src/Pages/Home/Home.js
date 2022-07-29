@@ -1,7 +1,6 @@
-import SideBar from "../../components/Sidebar/index";
+
 import AnimatedLetters  from "../../util/AnimatedLetters/AnimatedLetters";
-import React, { useState,useEffect, useRef,useLayoutEffect } from 'react';
-import LogoJ from '../../assets/bglogo.svg'
+import React, { useState,useEffect, useRef,useLayoutEffect } from 'react'
 import './index.scss'
 import Background from '../../components/Background/Background'
 import {gsap} from 'gsap';
