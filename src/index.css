@@ -14,7 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
 }
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 800px) {
   body{
     overflow: auto;
   }
