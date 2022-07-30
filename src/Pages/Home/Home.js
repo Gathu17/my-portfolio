@@ -107,7 +107,7 @@ const Home = () => {
       viewBox="0 0 500 500"
       className="logo-img" 
       ref={logoRef}
-      onClick={()=> animLogo()}
+      
     >
       <defs>
         <filter
