@@ -4,7 +4,7 @@ import React, { useState,useEffect, useRef,useLayoutEffect } from 'react'
 import './index.scss'
 import Background from '../../components/Background/Background'
 import {gsap} from 'gsap';
-import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
+//import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 import Star from '../../assets/star2.svg'
 
 const Home = () => {
