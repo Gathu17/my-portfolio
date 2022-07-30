@@ -40,7 +40,7 @@ const Home = () => {
          })
      },[])
 
-    
+    /*
      function animLogo() {
       gsap.registerPlugin(MotionPathPlugin);
       gsap.set(starRef.current, {xPercent:-50, yPercent:-50});
@@ -59,7 +59,7 @@ const Home = () => {
         delay: 5
         })
      }
-    
+    */
     return ( 
         <>
          
@@ -90,6 +90,7 @@ const Home = () => {
              strArray={"web".split()}
              index={18}
              />
+             <span> </span>
              <AnimatedLetters
              letterClass={letterClass}
              strArray={ jobArray}

@@ -3,8 +3,7 @@
 }
 .about-container{
     width: clamp(50vw,80vw,100vw);
-    
-    
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -43,10 +42,11 @@
         .card-container{
             position: absolute;
             width: 100%;
+            height: 20%;
             margin: auto;
            display: flex;
            z-index: 10000;
-    
+           margin-bottom: 20px;
         
             .card{
                 
@@ -169,3 +169,8 @@
     }
   
   }
+  @media only screen and (max-height: 700px) {
+   section{
+    top: 60vh;
+   }
+}
