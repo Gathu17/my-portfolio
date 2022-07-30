@@ -114,10 +114,18 @@
         box-shadow: none;
     }
 }
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 600px) {
     .contact-page{
         section{
             width: 80%;
+            margin: auto;
+            .header{
+             font-size: 2em;
+             margin-left: 20%;
+            }
+            form{
+                margin-left: 20%;
+            }
         }
     }
  }

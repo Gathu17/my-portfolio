@@ -5,6 +5,9 @@ aside {
     top: 0;
     background-color: #00002a;
     z-index: 1000;
+    .bar-icon{
+        display: none;
+    }
     img{
         width: 3em;
         height: 3em;
@@ -104,9 +107,23 @@ aside {
         }
     }
 }
+.show{
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+}
 @media only screen and (max-width: 540px) {
       aside{
+        position: absolute;
         width: 15%;
+        left: -15%;
+        transition: all 0.5s ease-out;
+        .bar-icon{
+            position: absolute;
+            display: block;
+            top: 20px;
+            right: -40px;
+            transform: scale(2)
+        }
         nav{
             a{
                 &:after{

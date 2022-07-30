@@ -2,19 +2,19 @@
     position: absolute;
     margin: 0 auto;
     width: clamp(50vw,80vw,100vw);
-    top:0;
+    top:10%;
     height: 100vh;
     h1{
-        font-size: 3em;
+        font-size: 3rem;
         text-align: center;
         transform: translateX(20%)
     }
-    pre{
-        position: relative;
-       font-size: 1em;
+    .p{
+        position: absolute;
+       font-size: 2em;
        font-weight: lighter;
        left: 30%;
-       margin-top: 2%; 
+       width: clamp(20vw, 70vw, 100vw);
        color: #ffffffb5;
     }
     .slide-container{
@@ -80,7 +80,10 @@
        }
        .slide._1{
         
-        transform: translateX(-100%)
+        transform: translateX(-100%);
+        .info{
+           opacity: 0;
+        }
        }
        .slide._2{
          transform:scale(1.5);
@@ -90,11 +93,15 @@
             filter:blur();
          }
          .info{
+            opacity: 1;
            transform: translateY(100%);
        }
     }       .slide._3{
        
-       transform: translateX(100%)
+       transform: translateX(100%);
+       .info{
+        opacity: 0;
+     }
        }
     }
 }
@@ -108,16 +115,30 @@
 }
 @media only screen and (max-width: 540px) {
    .project-container{
+    h1{
+        font-size: 2em;
+    }
+   .p{
+        left: 20%;
+        width: 70%;
+        word-wrap: break-word;
+        font-size: 0.7em;
+    }
     .slide-container{
+        top: 10%;
         .slide{
-            height: 60%;
+           height: 60%;
             .info{
                 font-size: 0.7em;
+                height: 90%;
                 
                 h3{
-                    top: 0;
-                    margin:0;
+                    
                     margin-bottom: 5px;
+            
+                }
+                 a{
+                    margin-left: 10%;
                 }
             }
         }
@@ -126,7 +147,7 @@
 }
 @media only screen and (min-width: 1200px) {
     .project-container{
-        pre{
+        .p{
             font-size: 20px;
         }
      .slide-container{

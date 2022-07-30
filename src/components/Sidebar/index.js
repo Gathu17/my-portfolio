@@ -1,21 +1,41 @@
 import {NavLink,Link} from 'react-router-dom'
+import React, { useState, useEffect} from 'react';
 import './index.scss'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faHome, faUser, faEnvelope, faFolder} from '@fortawesome/free-solid-svg-icons'
+import {faHome, faUser, faEnvelope, faFolder ,faBars, faXmark} from '@fortawesome/free-solid-svg-icons'
 import {faTwitter, faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import Logo from '../../assets/logo.png'
 
 
 const SideBar = () => {
+    const [openBar, setOpenBar] = useState(false)
     let activeStyle  = {
         color: "#3fa040"
     }
+    function navAnim(){
+        var aside = document.querySelector('aside')
+        aside.classList.toggle('show')
+        setOpenBar(!openBar)
+    }
+    
+    useEffect(() =>{
+      var btn = document.querySelector(".bar-icon");   
+        btn.addEventListener("click", navAnim)
+        return(
+          () => btn.removeEventListener("click", navAnim)
+        )
+    })
         return ( 
         
         <aside>
            <Link className="logo" to="/">
               <img src={Logo} alt="my logo"/>
            </Link>
+           {
+             window.innerWidth <= 600 ? <span className="bar-icon">{openBar ? <FontAwesomeIcon icon={faXmark}/>: <FontAwesomeIcon icon={faBars}/>}</span> 
+              : <span className="bar-icon"></span>
+           }
+          
            <nav>
             <NavLink className={'nav-link'} to="/" style={( isActive ) => isActive ? activeStyle : undefined}>
                 <FontAwesomeIcon icon={faHome} color="#4c4d40"/>

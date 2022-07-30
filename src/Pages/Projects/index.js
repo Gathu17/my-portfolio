@@ -83,7 +83,7 @@ const Project = () => {
            />
            </h1>
 
-           <pre>These are some of the projects that I have worked on.</pre>
+           <div className="p">These are some of the projects that I have worked on.</div>
            <div className="slide-container">
                <div className="slide _1">
                <img src={Amg} alt='s'style={{width: '100%', height: '100%'}}  />   

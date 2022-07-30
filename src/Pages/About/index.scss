@@ -11,8 +11,6 @@
     
     height: 100vh;
     section{
-        
-        transform: translateY(-70%);
         h1{
             
             margin: auto;
@@ -138,10 +136,11 @@
    
   }
   /* Tablets */
-  @media only screen and (min-width: 769px) and (max-width: 992px) {
-  
-   
-  
+  @media only screen and (min-width: 769px) and (max-width: 1200px) {
+       section{
+         width: 60%;
+         top: 40vh;
+       }
   }
   /* Smartphones Landscape & Portrait */
   @media only screen and (max-width: 768px) {
@@ -153,11 +152,18 @@
   @media only screen and (max-width: 540px) {
   
     section {
-      width: 400px;
+      width: 90%;
+      left: 5%;
+      top: 45vh;
+      p{
+        word-wrap: break-word;
+      }
       .card-container{
+        margin-top:0;
         .card{
             width: 10%;
             margin-right: 10px;
+            font-size: 10px;
         }
       }
     }

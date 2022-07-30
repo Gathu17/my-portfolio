@@ -18,9 +18,15 @@ const About = () => {
         <section>
             <h1 className="header">
                 <AnimatedLetters
-                strArray={"ABOUT ME".split("")}
+                strArray={"ABOUT".split("")}
                 letterClass={letterClass}
                 index={5}
+                />
+                <span>  </span>
+                <AnimatedLetters
+                strArray={"ME".split("")}
+                letterClass={letterClass}
+                index={10}
                 />
             </h1>
             <p>
@@ -34,7 +40,7 @@ const About = () => {
             </p>
             <p>
                 I am open-minded and easily approachable. I am open to discussing different approaches and arriving at the optimum solution that is best for the client.
-                I work well with others and don't mind group projects.
+                I work well with others and wouldn't mind collaborating with like-minded people interested in building web and IOT software solutions.
             </p>
             <h2>MY SKILLS</h2>
             <div className="card-container">
@@ -49,7 +55,7 @@ const About = () => {
             </div>
             <div className='card _3'>
                 <FontAwesomeIcon icon={faCss3} size='3x' color="#0000FF"/>
-                <div className='card-back'><ul><li>CSS3</li><li>Sass</li></ul></div>
+                <div className='card-back'><ul><li>CSS3</li><li>Sass</li><li>GSAP</li><li>Figma</li></ul></div>
             </div>
             <div className='card _4'>
                 <FontAwesomeIcon icon={faNode} size='3x' color="#FFD700"/>
