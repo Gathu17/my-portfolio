@@ -36,7 +36,8 @@
       //      transform: translateY(100%);
       //  }
        img{
-        filter: blur(4px)
+        filter: blur(4px);
+        touch-action: none;
        }
        .info{
        position: absolute;
@@ -58,6 +59,7 @@
             margin-top:0;
             margin-left: 1%;
             font-size: 0.8em;
+            touch-action: none;
            }
         button{
             position: absolute;

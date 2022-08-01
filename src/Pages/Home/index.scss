@@ -40,6 +40,7 @@ section{
     border-right: none;
     border-image: linear-gradient(to right, rgb(0, 0, 255),rgb(0, 199, 0));
     border-image-slice: 10;
+    border-radius:2px;
     animation: outerSpan 2s ease-out 1s forwards;
    }
    &:after{
@@ -47,9 +48,10 @@ section{
     content: "";
     bottom:0;
     left: 0%;
-    width: 5%;
+    width: 0%;
     height: 0;
     border: 3px solid ;
+    border-radius:2px;
     border-top: none;
     border-left: none;
     border-image: linear-gradient(to right, rgb(0, 0, 255),rgb(0, 199, 0));

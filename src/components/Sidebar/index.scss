@@ -103,7 +103,11 @@ aside {
             float: left;
             position: relative;
             margin: 10px ;
-            transform: scale(1.5)
+            transform: scale(1.5);
+            &:hover{
+                mix-blend-mode: screen;
+                filter: brightness(200%)
+            }
         }
     }
 }
